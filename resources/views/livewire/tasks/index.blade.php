@@ -66,6 +66,7 @@
 
                         <td class="p-3">
                             {{ $task->student?->name ?? '-' }}
+                            <span class="block text-xs text-gray-500">{{ $task->student?->asal_perguruan_tinggi ?? '-' }}</span>
                         </td>
 
                         <td class="p-3">

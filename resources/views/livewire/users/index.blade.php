@@ -56,6 +56,7 @@
                         <th class="px-6 py-3">Email</th>
                         <th class="px-6 py-3">Role</th>
                         <th class="px-6 py-3">Status</th>
+                        <th class="px-6 py-3">Asal PT/SMK</th>
                         <th class="px-6 py-3 text-right">Action</th>
                     </tr>
                 </thead>
@@ -87,7 +88,7 @@
                             <!-- role -->
                             <td class="px-6 py-4">
                                 <span class="px-2 py-1 text-xs font-medium text-blue-700 bg-blue-50 rounded-lg">
-                                    {{ $user->role }}
+                                    {{ $user->role == 'Admin' ? 'Pembimbing' : 'User' }}
                                 </span>
                             </td>
 
@@ -98,6 +99,10 @@
                                 </span>
                             </td>
 
+                            <td class="px-6 py-4 text-gray-600">
+                                {{ $user->asal_perguruan_tinggi ?? '-' }}
+                            </td>
+
                             <!-- action -->
                             <td class="px-6 py-4 text-right">
                                 <div class="flex justify-end gap-2">
@@ -106,7 +111,7 @@
                                         class="px-2 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100">
                                         Edit
                                     </a>
-{{-- 
+                                    {{-- 
                                     <form method="POST" action="{{ route('users.destroy', $user->id) }}">
                                         @csrf
                                         @method('DELETE')

@@ -72,8 +72,8 @@
         <div>
             <label class="block text-sm font-medium mb-1">Role</label>
             <select wire:model="role" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-800 dark:text-white">
-                <option value="Admin">Admin</option>
-                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Admin">Pembimbing</option>
+                <option value="Mahasiswa">User</option>
             </select>
         </div>
 
