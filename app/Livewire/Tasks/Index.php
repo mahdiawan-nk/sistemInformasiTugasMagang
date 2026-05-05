@@ -157,7 +157,7 @@ class Index extends Component
         }
 
         $this->validate([
-            'submissionFile' => 'required|file|max:2048|mimes:pdf,doc,docx,zip',
+            'submissionFile' => 'required|file|max:5120|mimes:pdf,doc,docx,zip,rar',
         ]);
 
         // Upload file
